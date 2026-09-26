@@ -1,0 +1,15 @@
+# Build output
+lib/
+bin/
+*.exe
+*.res
+*.o
+*.ppu
+*.a
+*.or
+*.compiled
+*.dbg
+
+# Lazarus session / backups
+*.lps
+backup/
