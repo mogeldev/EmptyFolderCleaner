@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empty Folder Cleaner</title>
+<meta name="description" content="Find and delete empty folders on Windows 7 to 11. Free and open source, single .exe, no installation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='2' y='13' font-family='monospace' font-size='14' font-weight='bold' fill='%236ee7b7'%3E$%3C/text%3E%3C/svg%3E">
+<style>
+  :root { --bg: #0f1115; --fg: #e8e8e8; --muted: #9aa0a6; --accent: #6ee7b7; --border: #2a2e35; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #fafafa; --fg: #1a1a1a; --muted: #5f6368; --accent: #0f9d58; --border: #e2e2e2; }
+  }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  main { max-width: 640px; margin: 0 auto; padding: 64px 24px 48px; line-height: 1.6; }
+  h1 { font-size: 1.75rem; margin: 0 0 .5rem; }
+  @media (max-width: 480px) { h1 { font-size: 1.3rem; } }
+  h2 { font-size: 1.05rem; font-weight: 400; margin: 3rem 0 1rem; }
+  p { margin: 0 0 1rem; }
+  .prompt { color: var(--accent); }
+  .tagline { color: var(--muted); margin: 0 0 2.5rem; font-size: .95rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .shot { display: block; width: 100%; height: auto; margin: 2rem 0; border: 1px solid var(--border); }
+  .download { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin: 2rem 0 .75rem; }
+  .btn { display: inline-block; padding: .7rem 1.2rem; border: 1px solid var(--accent); color: var(--accent); }
+  .btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+  .meta { color: var(--muted); font-size: .85rem; margin: 0; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { padding-left: 2ch; text-indent: -2ch; }
+  li::before { content: "- "; color: var(--muted); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted);
+    font-size: .85rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  footer span.sep { color: var(--border); margin: 0 .4rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="prompt">$</span> empty-folder-cleaner</h1>
+  <p class="tagline">Find and delete empty folders on Windows.</p>
+
+  <p>Scans a folder tree and lists every empty folder – including folders that
+  only contain other empty folders. Send them to the Recycle Bin with one click,
+  or delete them permanently if you prefer.</p>
+
+  <div class="download">
+    <a class="btn" href="https://github.com/mogeldev/EmptyFolderCleaner/releases/latest/download/EmptyFolderCleaner-x64.exe">↓ download (64-bit)</a>
+    <a href="https://github.com/mogeldev/EmptyFolderCleaner/releases/latest/download/EmptyFolderCleaner-x86.exe">32-bit version</a>
+  </div>
+  <p class="meta">Windows 7–11 · single .exe · no install · free &amp; open source (MIT)</p>
+
+  <img class="shot" src="screenshot.png" width="1292" height="915"
+       alt="Empty Folder Cleaner window listing 13 empty folders found in D:\Data, all checked for deletion">
+
+  <h2><span class="prompt">$</span> cat features</h2>
+  <ul>
+    <li>background scan, can be cancelled</li>
+    <li>Recycle Bin by default, permanent delete optional</li>
+    <li>deepest folders first, each checked again right before deletion</li>
+    <li>warns before scanning drive roots and system folders</li>
+    <li>never follows junctions; hidden files count as content</li>
+    <li>long paths (&gt; 260 characters), Unicode names, high DPI</li>
+  </ul>
+
+  <h2><span class="prompt">$</span> cat notes</h2>
+  <p>Use the 64-bit version on 64-bit Windows; the 32-bit build is for 32-bit
+  systems such as Windows 7 x86.</p>
+  <p class="muted">The .exe is not code-signed, so Windows SmartScreen may warn on
+  first start – choose “More info” → “Run anyway”. Checksums are listed on the
+  <a href="https://github.com/mogeldev/EmptyFolderCleaner/releases/latest">release page</a>.</p>
+
+  <footer>
+    <span>© 2026 <a href="https://mogeldev.github.io/">mogeldev</a></span>
+    <span><a href="https://github.com/mogeldev/EmptyFolderCleaner">source</a><span class="sep">/</span><a href="https://github.com/mogeldev/EmptyFolderCleaner/releases">releases</a></span>
+  </footer>
+</main>
+</body>
+</html>
